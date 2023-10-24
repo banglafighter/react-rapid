@@ -15,11 +15,14 @@ import {_t, i18n, _tNumber} from "react-rapid-i18n/app/react-rapid-i18n";
 import {RapidUtil} from "./src/artifacts/utils/rr-util";
 import RapidBrowserStorageManager from "./src/artifacts/manager/rr-browser-storage-manager";
 import {RapidAppContext} from "./src/artifacts/config/rr-app-context";
+import {RapidAppContextProps} from "./src/artifacts/config/rr-app-context";
+import {RapidMessageData} from "./src/artifacts/data/rr-message-data";
 
 // For Interface
 export type {
     RapidHTTResponse,
     RapidProps,
+    RapidAppContextProps,
 }
 
 export {
@@ -40,6 +43,7 @@ export {
     RapidBrowserStorageManager,
     RapidAppContext,
     RapidUtil,
+    RapidMessageData,
 }
 
 // External Library Export
@@ -47,10 +51,12 @@ import React from "react";
 import {Component} from 'react';
 import {Link} from "react-router-dom";
 import {Redirect} from "react-router";
+import ReactDOM from 'react-dom';
 
 export {
     Component,
     React,
-        Link,
-    Redirect
+    Link,
+    Redirect,
+    ReactDOM,
 }
