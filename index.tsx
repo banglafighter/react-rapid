@@ -11,3 +11,11 @@ export {
     RapidException,
     RapidLoadDataPrams
 }
+
+// External Library Export
+import React from "react";
+import {Component} from 'react';
+export {
+    Component,
+    React
+}
