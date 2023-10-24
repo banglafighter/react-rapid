@@ -1,7 +1,8 @@
 {
   "name": "react-rapid-app",
-  "version": "1.0.0",
-  "private": false,
+  "version": "0.0.1",
+  "main": "dist/index",
+  "typings": "dist/index",
   "dependencies": {
     "@types/node": "^16.11.0",
     "@types/react": "^18.0.9",
@@ -15,7 +16,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack --mode=development"
+    "rapid-app-build": "tsc -p ."
   },
   "eslintConfig": {
     "extends": [
@@ -33,8 +34,13 @@
     "dist",
     "readme.md"
   ],
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Bangla Fighter",
+    "url": "https://banglafighter.com"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/banglafighter/react-rapid"
+    "url": "https://github.com/banglafighter/react-rapid-app"
   }
 }
