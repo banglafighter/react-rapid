@@ -169,7 +169,7 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         this.notifyComponentChange()
     }
 
-    public setuRapidieldAttrs(name: string) {
+    public setupFieldAttrs(name: string) {
         let inputAttributes: any = this.rapidComponentHelper.getInputDefinitionToAttributes(name)
         this.rapidComponentHelper.handleOnChangeEvent(inputAttributes)
         this.rapidComponentHelper.handleOnBlurEvent(inputAttributes)
