@@ -143,7 +143,7 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
 
     public renderUI() {
         return (
-            <h1>PF React Application View Component</h1>
+            <h1>Rapid React Application View Component</h1>
         );
     }
 
@@ -169,7 +169,7 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         this.notifyComponentChange()
     }
 
-    public setupFieldAttrs(name: string) {
+    public setuRapidieldAttrs(name: string) {
         let inputAttributes: any = this.rapidComponentHelper.getInputDefinitionToAttributes(name)
         this.rapidComponentHelper.handleOnChangeEvent(inputAttributes)
         this.rapidComponentHelper.handleOnBlurEvent(inputAttributes)

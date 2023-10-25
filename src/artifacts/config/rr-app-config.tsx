@@ -52,8 +52,8 @@ export default class RapidAppConfig {
         return true;
     }
 
-    public renewAuthorization(pfHttpCall: RapidHTTPCall): void {
-        pfHttpCall.resume();
+    public renewAuthorization(RapidHttpCall: RapidHTTPCall): void {
+        RapidHttpCall.resume();
     }
 
     public addToGeneralConfig(key: string, value: any) {

@@ -3,7 +3,7 @@ import RapidHTTRequest from "../http/rr-http-request";
 import RapidHTTCallback from "../http/rr-http-callback";
 import axios, {AxiosError, AxiosResponse} from 'axios';
 import {RapidHTTPConst} from "../http/rr-http-const";
-import PFHTTResponse from "../http/rr-http-response";
+import RapidHTTResponse from "../http/rr-http-response";
 
 
 export default class AxiosHTTPManager implements RapidHTTPManager {
@@ -60,7 +60,7 @@ export default class AxiosHTTPManager implements RapidHTTPManager {
 
     private processErrorResponse(error: AxiosError) {
         if (error.response === undefined) {
-            let sentResponse: PFHTTResponse = {
+            let sentResponse: RapidHTTResponse = {
                 isSuccess: false,
                 message: error.message,
             }

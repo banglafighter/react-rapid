@@ -11,7 +11,7 @@ import {FieldSpecification} from "./src/artifacts/data/rr-input-definition";
 import RapidSysComponent from "./src/artifacts/component/rr-sys-component";
 import RapidReactComponent from "./src/artifacts/component/rr-react-component";
 import RapidLayoutRenderer from "./src/artifacts/component/rr-layout-rander";
-import {_t, i18n, _tNumber} from "react-rapid-i18n/app/react-rapid-i18n";
+import {_t, i18n, _tNumber, _loadTranslation} from "react-rapid-i18n/app/react-rapid-i18n";
 import {RapidUtil} from "./src/artifacts/utils/rr-util";
 import RapidBrowserStorageManager from "./src/artifacts/manager/rr-browser-storage-manager";
 import {RapidAppContext} from "./src/artifacts/config/rr-app-context";
@@ -28,6 +28,7 @@ export type {
 export {
     _tNumber,
     _t,
+    _loadTranslation,
     i18n,
     RapidException,
     RapidLoadDataPrams,
