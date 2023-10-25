@@ -22,6 +22,9 @@ import RapidHTTRequest from "./src/artifacts/processor/http/rr-http-request";
 import {RapidHTTPCall} from "./src/artifacts/interface/rr-mixed-interface";
 import RapidHTTCallback from "./src/artifacts/processor/http/rr-http-callback";
 import {RapidReactConst} from "./src/artifacts/common/rr-react-const";
+import RapidHTTAuthCallback from "./src/artifacts/processor/http/rr-http-auth-callback";
+import RapidAppRegistry from "./src/artifacts/config/rr-app-registry";
+import RapidPageManager from "./src/artifacts/manager/rr-page-manager";
 
 // For Interface
 export type {
@@ -29,7 +32,8 @@ export type {
     RapidProps,
     RapidAppContextProps,
     RapidHTTPCall,
-    RapidHTTCallback
+    RapidHTTCallback,
+    RapidHTTAuthCallback,
 }
 
 export {
@@ -55,6 +59,8 @@ export {
     RapidMessageData,
     SortDirection,
     RapidHTTRequest,
+    RapidAppRegistry,
+    RapidPageManager,
 }
 
 // External Library Export
