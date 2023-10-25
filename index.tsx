@@ -69,6 +69,7 @@ import {Component} from 'react';
 import {Link} from "react-router-dom";
 import {Redirect} from "react-router";
 import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 export {
     Component,
@@ -76,4 +77,5 @@ export {
     Link,
     Redirect,
     ReactDOM,
+    createRoot,
 }
