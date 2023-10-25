@@ -17,12 +17,19 @@ import RapidBrowserStorageManager from "./src/artifacts/manager/rr-browser-stora
 import {RapidAppContext} from "./src/artifacts/config/rr-app-context";
 import {RapidAppContextProps} from "./src/artifacts/config/rr-app-context";
 import {RapidMessageData} from "./src/artifacts/data/rr-message-data";
+import { SortDirection } from "./src/artifacts/data/rr-mixed-data";
+import RapidHTTRequest from "./src/artifacts/processor/http/rr-http-request";
+import {RapidHTTPCall} from "./src/artifacts/interface/rr-mixed-interface";
+import RapidHTTCallback from "./src/artifacts/processor/http/rr-http-callback";
+import {RapidReactConst} from "./src/artifacts/common/rr-react-const";
 
 // For Interface
 export type {
     RapidHTTResponse,
     RapidProps,
     RapidAppContextProps,
+    RapidHTTPCall,
+    RapidHTTCallback
 }
 
 export {
@@ -44,7 +51,10 @@ export {
     RapidBrowserStorageManager,
     RapidAppContext,
     RapidUtil,
+    RapidReactConst,
     RapidMessageData,
+    SortDirection,
+    RapidHTTRequest,
 }
 
 // External Library Export
