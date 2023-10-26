@@ -25,6 +25,8 @@ import {RapidReactConst} from "./src/artifacts/common/rr-react-const";
 import RapidHTTAuthCallback from "./src/artifacts/processor/http/rr-http-auth-callback";
 import RapidAppRegistry from "./src/artifacts/config/rr-app-registry";
 import RapidPageManager from "./src/artifacts/manager/rr-page-manager";
+import StringUtil from "./src/artifacts/common/string-util";
+import RapidContextHelper from "./src/artifacts/component/helper/rr-context-helper";
 
 // For Interface
 export type {
@@ -61,6 +63,8 @@ export {
     RapidHTTRequest,
     RapidAppRegistry,
     RapidPageManager,
+    StringUtil,
+    RapidContextHelper,
 }
 
 // External Library Export
