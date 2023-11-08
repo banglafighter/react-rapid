@@ -13,8 +13,8 @@ export default class RapidLayoutInfoData {
         return this;
     }
 
-    public addPageInstance(relativeURL: string, component: any): RapidLayoutInfoData {
-        this.pageInfoDataList.push(this.pageInfoInstance(relativeURL, component));
+    public addPageInstance(relativeURL: string, component: any, additionalData?: any): RapidLayoutInfoData {
+        this.pageInfoDataList.push(this.pageInfoInstance(relativeURL, component, additionalData));
         return this;
     }
 
@@ -27,10 +27,11 @@ export default class RapidLayoutInfoData {
         return this.pageInfoDataList;
     }
 
-    public pageInfoInstance(relativeURL: string, component: any): RapidPageInfoData {
+    public pageInfoInstance(relativeURL: string, component: any, additionalData?: any): RapidPageInfoData {
         let pageInfo = new RapidPageInfoData();
         pageInfo.relativeURL = relativeURL;
         pageInfo.component = component;
+        pageInfo.additionalData = additionalData;
         return pageInfo;
     }
 

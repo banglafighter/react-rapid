@@ -6,6 +6,7 @@ import {RapidMessageData} from "../data/rr-message-data";
 export interface RapidProps {
     appConfig?: RapidAppConfig
     route?: any
+    additionalData?: any
 }
 export interface RapidState { }
 export interface HTTPCallback { callback(response: RapidHTTResponse): void; }

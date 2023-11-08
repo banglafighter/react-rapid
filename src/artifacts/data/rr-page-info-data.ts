@@ -5,6 +5,7 @@ export default class RapidPageInfoData {
     public displayName!: string;
     public icon!: any;
     public component!: any;
+    public additionalData!: any;
     public showInLeftNav: boolean = false;
     public showInTopNav: boolean = false;
     public showInRightNav: boolean = false;

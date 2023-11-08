@@ -31,7 +31,7 @@ export default class RapidPageManager extends RapidReactComponent<RapidPageManag
                 path={pageInfoData.relativeURL}
                 key={index}
                 render={(route) => {
-                    return (<Layout component={pageInfoData.component} route={route} appConfig={appConfig} />)
+                    return (<Layout component={pageInfoData.component} route={route} appConfig={appConfig} additionalData={pageInfoData.additionalData} />)
                 }}
             />
         )
