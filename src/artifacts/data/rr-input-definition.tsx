@@ -61,6 +61,8 @@ export interface OnOffInputDefinition extends BaseInputDefinition {
 export interface InputDefinition extends BaseInputDefinition {
     placeholder?: string
     autoComplete?: string
+    wrapperClass?: string
+    addWrapperClass?: string
 }
 
 export interface FileInputDefinition extends InputDefinition {
