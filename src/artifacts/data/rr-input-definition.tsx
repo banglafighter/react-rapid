@@ -29,6 +29,7 @@ export interface InputDataDefinition {
     value?: unknown
     defaultValue?: any
     type?: InputType
+    isHideInput?: boolean
 }
 
 export interface HiddenInputDefinition extends InputDataDefinition{
@@ -178,6 +179,26 @@ export class FieldSpecification {
 
     public updateFieldDef(spec: BaseInputDefinition): FieldSpecification {
         this.fieldDefinition.set(spec.name, spec)
+        return this
+    }
+
+    public hideInput(name: string) {
+        let definition = this.getDefByName(name)
+        if (definition) {
+            definition.isHideInput = true
+            this.updateFieldDef(definition)
+        }
+        return this
+    }
+
+    public mergeDefinition(fieldDefinition?: Map<string, InputDataDefinition>): FieldSpecification {
+        if (fieldDefinition) {
+            fieldDefinition.forEach(
+                (definition: InputDataDefinition, name: string) => {
+                    this.fieldDefinition.set(definition.name, definition)
+                }
+            )
+        }
         return this
     }
 
