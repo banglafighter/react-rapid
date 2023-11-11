@@ -2,6 +2,7 @@ export default class RapidPageInfoData {
 
     public relativeURL!: string;
     public name!: string;
+    public pageKey?: string;
     public displayName!: string;
     public icon!: any;
     public component!: any;

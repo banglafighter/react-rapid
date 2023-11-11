@@ -25,11 +25,15 @@ export default class RapidPageManager extends RapidReactComponent<RapidPageManag
 
     private getRouter(pageInfoData: RapidPageInfoData, Layout: any, index: any) {
         const {appConfig} = this.props;
+        let pageKey: any = index
+        if (pageInfoData.pageKey){
+            pageKey = pageInfoData.pageKey
+        }
         return (
             <Route
                 exact
                 path={pageInfoData.relativeURL}
-                key={index}
+                key={pageKey}
                 render={(route) => {
                     return (<Layout component={pageInfoData.component} route={route} appConfig={appConfig} additionalData={pageInfoData.additionalData} />)
                 }}
