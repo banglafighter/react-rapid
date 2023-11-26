@@ -111,9 +111,13 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         return window.appConfig;
     }
 
+    public getRandomKey() {
+        return "" + (Math.random() * 100000000000)
+    }
+
     public notifyComponentChange() {
         this.setState<never>({
-                ["componentChanged"]: Math.random() * 100000000000
+                ["componentChanged"]: this.getRandomKey()
             }
         );
     }
