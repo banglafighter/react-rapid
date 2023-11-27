@@ -184,6 +184,17 @@ export class FieldSpecification {
         return this
     }
 
+    public updateDefByMap(name: string, props: Map<string, any>) {
+        let definition: any = this.getDefByName(name)
+        if (!definition || !props) {
+            return
+        }
+        props.forEach((value: any, name: any) => {
+            definition[name] = value
+        })
+        this.updateFieldDef(definition)
+    }
+
     public hideInput(name: string) {
         let definition = this.getDefByName(name)
         if (definition) {
