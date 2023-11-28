@@ -52,6 +52,8 @@ export interface BaseInputDefinition extends InputDataDefinition {
     blurEvent?: RapidInputEvent
 
     customValidation?: CustomValidation;
+    wrapperClass?: string
+    addWrapperClass?: string
 }
 
 export interface OnOffInputDefinition extends BaseInputDefinition {
@@ -61,8 +63,6 @@ export interface OnOffInputDefinition extends BaseInputDefinition {
 export interface InputDefinition extends BaseInputDefinition {
     placeholder?: string
     autoComplete?: string
-    wrapperClass?: string
-    addWrapperClass?: string
 }
 
 export interface FileInputDefinition extends InputDefinition {
