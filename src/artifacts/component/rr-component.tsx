@@ -188,12 +188,12 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         return defaultValue
     }
 
-    public getFormData() {
+    public getFormData(message: string = "Data Validation Error") {
         if (this.rapidComponentHelper.validateEachDataOfFormData()) {
             return this.state.formData
         }
         this.notifyComponentChange()
-        throw new RapidException("Data Validation Error")
+        throw new RapidException(message)
     }
 
     public setFormData(formData: { [key: string]: any }) {
