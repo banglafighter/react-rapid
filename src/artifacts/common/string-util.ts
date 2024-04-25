@@ -48,4 +48,25 @@ export default class StringUtil {
         return text.replaceAll(findRegex, replace);
     }
 
+    public static removeSpecialCharacter(text: string, replace: string = "") {
+        if (text) {
+            text = text.replace(/[^\w\s-_/]/gi, replace);
+        }
+        return text
+    }
+
+    public static nameToURL(name: string) {
+        if (!name) {
+            return name
+        }
+        let url: string = StringUtil.splitCamelCaseToSpace(name)
+        url = StringUtil.findReplace(url, " ", "-")
+        url = StringUtil.findReplace(url, "_", "-")
+        url = StringUtil.replaceMoreThanOneOccurrence(url, "_")
+        url = StringUtil.replaceMoreThanOneOccurrence(url, undefined, "-", "\\-")
+        url = StringUtil.removeSpecialCharacter(url)
+        url = url.toLowerCase()
+        return url
+    }
+
 }
