@@ -69,4 +69,26 @@ export default class StringUtil {
         return url
     }
 
+    public static nameToLabel(name: string) {
+        if (!name) {
+            return name
+        }
+        let label: string = StringUtil.camelCaseToHumanReadable(name)
+        label = StringUtil.replaceMoreThanOneOccurrence(label, undefined, "-", "\\-")
+        label = StringUtil.findReplace(label, "-", " ")
+        label = StringUtil.removeSpecialCharacter(label)
+        label = StringUtil.capitalizeFirstLetter(label)
+        return label
+    }
+
+    public static nameToSystemName(name: string) {
+        if (!name) {
+            return name
+        }
+        let systemName: string = StringUtil.nameToLabel(name)
+        systemName = StringUtil.findReplace(systemName, " ", "")
+        systemName = StringUtil.smallFirstLatter(systemName)
+        return systemName
+    }
+
 }
