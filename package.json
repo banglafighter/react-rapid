@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "rapid-app-build": "tsc -p ."
+    "build": "tsc -p ."
   },
   "eslintConfig": {
     "extends": [
