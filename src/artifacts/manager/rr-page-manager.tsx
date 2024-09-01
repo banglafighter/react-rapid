@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route, Switch} from "react-router-dom";
 import RapidContextComponent from "../component/rr-context-component";
 import RapidAppConfig from "../config/rr-app-config";
 import RapidReactComponent from "../component/rr-react-component";
@@ -55,7 +55,7 @@ export default class RapidPageManager extends RapidReactComponent<RapidPageManag
         const {urlMapping, appConfig, contextProps} = this.props
         return (
             <RapidContextComponent contextProps={contextProps} appConfig={appConfig}>
-                <BrowserRouter>
+                <HashRouter>
                     <Switch>
                         {
                             urlMapping.getLayoutsAndPages().map((layoutData: RapidLayoutInfoData, index: any) => {
@@ -66,7 +66,7 @@ export default class RapidPageManager extends RapidReactComponent<RapidPageManag
                         }
                         <Route component={appConfig.getNotFoundView}/>
                     </Switch>
-                </BrowserRouter>
+                </HashRouter>
             </RapidContextComponent>
         );
     }
