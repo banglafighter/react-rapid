@@ -4,8 +4,11 @@ import RapidURLMapping from "../config/rr-url-mapping";
 import {RapidAppContextProps} from "../config/rr-app-context";
 
 
+export type RouteType = 'Browser' | 'Hash'
+
 export interface RapidPageManagerProps extends RapidProps {
     urlMapping: RapidURLMapping;
     appConfig: RapidAppConfig;
     contextProps?: RapidAppContextProps
+    routeType?: RouteType
 }
