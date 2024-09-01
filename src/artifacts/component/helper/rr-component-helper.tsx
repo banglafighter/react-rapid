@@ -27,7 +27,7 @@ export class RapidComponentHelper {
     }
 
     private getFilesFromInput(name: string, target: any): Array<File> {
-        let files = new Array<File>();
+        let files: any = new Array<File>();
         if (this.state.formData && this.state.formData[name] && this.state.formData[name] instanceof FormData) {
             files = this.state.formData[name];
         }
