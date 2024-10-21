@@ -18,7 +18,7 @@ export default class StringUtil {
     }
 
     public static camelCaseTo(text: string, char: string = "_") {
-        return text.replaceAll(/[A-Z]/g, letter => char + letter);
+        return text.replace(/[A-Z]/g, (letter: any) => char + letter);
     }
 
     public static splitCamelCaseToSpace(text: string) {
@@ -45,7 +45,7 @@ export default class StringUtil {
 
     public static findReplace(text: string, find: string, replace: string) {
         let findRegex = new RegExp(find, 'g');
-        return text.replaceAll(findRegex, replace);
+        return text.replace(findRegex, replace);
     }
 
     public static removeSpecialCharacter(text: string, replace: string = "") {
