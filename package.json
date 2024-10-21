@@ -18,7 +18,7 @@
     "start": "webpack-dev-server",
     "build": "tsc -p .",
     "prepublishOnly": "node prepublish.js && tsc",
-    "release": "cross-env RELEASE_MODE=true np --no-tests --any-branch"
+    "release": "cross-env RELEASE_MODE=true np --no-tests --branch release-test"
   },
   "eslintConfig": {
     "extends": [
