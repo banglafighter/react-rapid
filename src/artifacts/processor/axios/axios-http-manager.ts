@@ -25,6 +25,10 @@ export default class AxiosHTTPManager implements RapidHTTPManager {
             onDownloadProgress: request.onDownloadProgress,
         }
 
+        if (request.responseType) {
+            processedRequest.responseType = request.responseType
+        }
+
         if (request.headers !== undefined) {
             processedRequest.headers = request.headers;
         }
