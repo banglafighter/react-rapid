@@ -182,7 +182,7 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
     }
 
     public getFormDataValueByName(name: string, defaultValue: any = undefined) {
-        if (this.state.formData && this.state.formData[name]) {
+        if (this.state.formData && this.state.formData[name] != null) {
             return this.state.formData[name]
         }
         return defaultValue

@@ -131,7 +131,7 @@ export class RapidComponentHelper {
                 (definition: BaseInputDefinition, name: string) => {
                     if (definition.isHideInput) {
                         return
-                    } else if (definition.required && !_this.getValueFromFormData(name, undefined)) {
+                    } else if (definition.required && _this.getValueFromFormData(name, null) == null) {
                         isValid = false;
                         _this.addValidationError(name)
                     } else if (!_this.processCustomValidation(definition, name)) {
