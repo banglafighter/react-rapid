@@ -87,7 +87,7 @@ export class RapidComponentHelper {
     }
 
     public getValueFromFormData(name: string, defaultValue: any = "") {
-        if (this.state.formData && this.state.formData[name] != null) {
+        if (this.state.formData && this.state.formData[name] != null && this.state.formData[name] !== "") {
             return this.state.formData[name];
         }
         return defaultValue;
