@@ -115,9 +115,13 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         return "" + (Math.random() * 100000000000)
     }
 
-    public notifyComponentChange() {
+    public notifyComponentChange(afterNotify?: () => void) {
         this.setState<never>({
                 ["componentChanged"]: this.getRandomKey()
+            }, () => {
+                if (afterNotify) {
+                    afterNotify()
+                }
             }
         );
     }
@@ -164,12 +168,16 @@ export default class RapidComponent<P extends RapidProps, S extends RapidCompone
         this.updateInputValue(name, value)
     }
 
-    public updateInputValue(name: string, value: any) {
+    public updateInputValueWithoutNotify(name: string, value: any) {
         let inputAttributes: any = this.rapidComponentHelper.getInputDefinitionToAttributes(name)
         inputAttributes.value = value
         this.rapidComponentHelper.updateInputValue(name, inputAttributes)
         this.state.formData[name] = value
         this.rapidComponentHelper.setFormData(this.state.formData)
+    }
+
+    public updateInputValue(name: string, value: any) {
+        this.updateInputValueWithoutNotify(name, value)
         this.notifyComponentChange()
     }
 
